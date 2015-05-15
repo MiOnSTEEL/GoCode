@@ -1,6 +1,4 @@
 
-#print commands
-
 def budget_commands():
 	print "CSV Budget Commands"
 	print "o: open"
