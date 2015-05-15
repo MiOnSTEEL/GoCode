@@ -1,0 +1,24 @@
+import sqlite3
+
+def open(self):
+	self.data = squlite3.connect(self.db_file)
+
+def create_person_table(self):
+	cursor = self.data.cursor()
+	cursor.execute('''CREATE TABLE posts(id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT)''')
+	self.data.commit()
+
+def create_pet_table(self):
+	cursor = self.data.cursor()
+	cursor.execute('''CREATE TABLE posts(id INTEGER PRIMARY KEY, pet_name TEXT, 
+pet_species TEXT, pet_breed TEXT, person_id TEXT)''')
+	self.data.commit()
+
+def create_table_called_pets(self):
+	cursor = self.data.cursor()
+	cursor.execute('''CREATE TABLE posts(id INTEGER PRIMARY KEY, pet_name TEXT, 
+pet_species TEXT, pet_breed TEXT)''')
+	self.data.commit()
+
+
+
